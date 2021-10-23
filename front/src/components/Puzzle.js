@@ -22,8 +22,9 @@ export default (props) => {
         <div>
             {puzzle && (
                 <div>
-                    {difficulties.map((diff) => (
+                    {difficulties.map((diff, index) => (
                         <button
+                            key={index}
                             class="btn btn-primary"
                             onClick={() => setDifficulty(diff.data)}
                         >

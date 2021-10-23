@@ -11,7 +11,6 @@ import React, { useEffect, useState } from "react"
 
 const App = () => {
     const [authUser, setAuthUser] = useState(null)
-    const [modal, setModal] = useState(false)
 
     const getMe = () => {
         axios

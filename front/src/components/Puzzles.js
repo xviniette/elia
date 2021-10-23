@@ -46,7 +46,7 @@ export default ({ authUser }) => {
             <div class="container">
                 <div class="row row-cols-3">
                     {puzzles.map((puzzle) => (
-                        <div class="col">
+                        <div class="col" key={puzzle.id}>
                             <div class="card">
                                 <img
                                     src={`${process.env.REACT_APP_API}asset?path=${puzzle.image}`}

@@ -38,7 +38,7 @@ export default ({ image, size, loop }) => {
         for (let x = 0; x < grid.length; x++) {
             for (let y = 0; y < grid[x].length; y++) {
                 const value = grid[x][y]
-                if (value == null) continue
+                if (value === null) continue
                 const coordY = value % grid.length
                 const coordX = Math.floor(value / grid.length)
 
@@ -70,7 +70,7 @@ export default ({ image, size, loop }) => {
         for (let i = 0; i < size; i++) {
             let arr = []
             for (let j = 0; j < size; j++) {
-                if (i == size - 1 && j == size - 1) value = null
+                if (i === size - 1 && j === size - 1) value = null
                 arr.push(value)
                 value++
             }
@@ -103,9 +103,9 @@ export default ({ image, size, loop }) => {
         let previous = -1
         for (let x = 0; x < grid.length; x++) {
             for (let y = 0; y < grid[x].length; y++) {
-                if (x == grid.length - 1 && y == grid[x].length - 1)
-                    return grid[x][y] == null
-                if (grid[x][y] != previous + 1) return false
+                if (x === grid.length - 1 && y === grid[x].length - 1)
+                    return grid[x][y] === null
+                if (grid[x][y] !== previous + 1) return false
                 previous = grid[x][y]
             }
         }
